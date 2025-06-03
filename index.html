@@ -1,0 +1,382 @@
+﻿<script>
+  window.addEventListener('scroll', function () {
+    const overlay = document.getElementById('siteOverlay');
+    const scrollY = window.scrollY;
+    const fadeStart = 0;   // when fading starts
+    const fadeEnd = 200;   // when it reaches 0 opacity
+
+    let opacity = 1;
+
+    if (scrollY > fadeEnd) {
+      opacity = 0;
+    } else if (scrollY > fadeStart) {
+      opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
+    }
+
+    overlay.style.opacity = opacity;
+  });
+</script>
+        <div id="container">
+            <div id="headerArea">
+                <div id="header"></div>
+                <nav id="navbar" style="margin-bottom: 10px;">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="TermsOfService.html">Terms Of Service</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
+                        <li><a href="CommissionProcess.html">Commission Process</a></li
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="flex">
+                <div class="site-overlay" id="siteOverlay">
+                <img src="assets/upperglow.png" alt="Overlay" />
+                </div>
+                <main>
+                    <h1>Hi, I'm Tumbly, welcome to my webpage !  </h1> 
+                    <img src="assets/Tumbly.png" width="150" height="150" style="float:right;margin:0px 50px">
+                    <p>Commission Waitlist Status : <span style="color:crimson;">CLOSED</span></p>
+                    <p>INext opening : <span style="color:lightgrey;">Summer Slots TBA</span> </p>
+
+                    <p> - About TumblysArt - </p>
+                    <p>Hi! I'm <span style="color:lightgrey;">♡ Tumbly ♡</span> I'm an Illustrator, Model Artist, and Live2d Rigger. I work on a variety of models, such as anime, furry, and pony / animal (bipedal and quadruped) models. I specialize in expressive, bouncy rigs, which is what I am known for ! Have an ambitious project ? I'm all ears!  </p>
+
+                    <p>Lets bring your true self to life! ♡ Join our family of over 200 ♡</p>
+
+
+                </main>
+                
+            <aside id="rightSidebar" style="margin-left: 10px;"><h2>Updates</h2>
+            <div class="box">
+                <p>I am looking to open slots for Summer 2025! Stay tuned. </p>
+                <ul style="padding-left:10px;">
+                   <li> Current Waitlist : N/A at this current time ! </li> 
+                </ul>
+        <!-- THIS IS THE CSS !-->
+        <style>
+            /* user styles */
+
+            /* styles are what change the color and sizes of stuff on your site. */
+
+            /* these are variables that are being used in the code
+    these tended to confuse some people, so I only kept 
+    the images as variables */
+
+            :root {
+                --header-image: url('https://i.imgur.com/vhvOs5V.png');
+                --body-bg-image: url('https://i.imgur.com/w4UyxUD.png');
+
+                /* colors */
+                --content: #8D8D8D;
+            }
+
+            /* if you have the URL of a font, you can set it below */
+            /* feel free to delete this if it's not your vibe */
+
+            /* this seems like a lot for just one font and I would have to agree 
+    but I wanted to include an example of how to include a custom font.
+    If you download a font file you can upload it onto your Neocities
+    and then link it! Many fonts have separate files for each style
+    (bold, italic, etc. T_T) which is why there are so many!
+    
+    */
+
+            @font-face {
+                font-family: Nunito;
+                src: src: url('font/VeniceClassic.ttf');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('font/VeniceClassic.ttf');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('font/VeniceClassic.ttf');
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('font/VeniceClassic.ttf');
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            body {
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                background-color: #08031A;
+                /* you can delete the line below if you'd prefer to not use an image */
+                background-image: var(--body-bg-image);
+                background-repeat: no-repeat; /* Stop repeating */
+                background-size: cover;       /* OR use contain depending on your goal */
+                background-position: top center;
+                background-size: 1920px;
+                color: #8D8D8D;
+                background-image: var(--body-bg-image);
+                font-size: 30px;
+                  background-color: #000000; /* This is already your page's base color */
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .site-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.site-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.site-overlay img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: none;
+  width: auto;
+  height: auto;
+  image-rendering: auto;
+  opacity: .6;
+
+  /* Optional: Adjust the image placement */
+  transform: translate(0px, 0px);
+
+  /* Prevent scaling on resize */
+  min-width: unset;
+  min-height: unset;
+    /* Optional: Adjust the image placement */
+  transform: translate(0px, 0px);
+
+  /* Prevent scaling on resize */
+  min-width: unset;
+  min-height: unset;
+}
+
+
+            /* below this line is CSS for the layout */
+
+            /* this is a CSS comment
+    to uncomment a line of CSS, remove the * and the /
+    before and after the text */
+
+
+            /* the "container" is what wraps your entire website */
+            /* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+            #container {
+                max-width: 1200px;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+                margin: 0 auto;
+                /* this centers the entire page */
+            }
+
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #ED64F5;
+                font-weight: bold;
+                /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+            }
+
+            #header {
+                width: 100%;
+                background-color: #8D8D8D;
+                /* header color here! */
+                height: 150px;
+                /* this is only for a background image! */
+                /* if you want to put images IN the header, 
+      you can add them directly to the <div id="header"></div> element! */
+                background-image: var(--header-image);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                margin-top: 40px;
+            }
+
+            /* navigation section!! */
+            #navbar {
+                height: 50px;
+                background-color: #000000;
+                /* navbar color */
+                width: 100%;
+                border-radius: 50px;
+                margin-top: 10px;
+                background-size: contain;
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+            /* navigation links*/
+            #navbar li a {
+                color: #8D8D8D;
+                /* navbar text color */
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+            }
+
+            /* navigation link when a link is hovered over */
+            #navbar li a:hover {
+                color: #FFFFFF;
+            }
+
+            #flex {
+                display: flex;
+            }
+
+            /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+            aside {
+                background-color: #0D0D0D;
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+    between the sidebars! */
+            main {
+                background-color: #0D0D0D;
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+
+            /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+            */ #leftSidebar {
+                order: 1;
+            }
+
+            #rightSidebar {
+                order: 3;
+            }
+
+            footer {
+                background-color: #0D0D0D;
+                /* background color for footer */
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                /* this centers the footer text */
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #AEAEAE;
+            }
+
+            h1 {
+                font-size: 55px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #ED64F5;
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box {
+                background-color: #0D0D0D;
+                border: 1px solid #AEAEAE;
+                padding: 15px;
+            }
+
+            /* CSS for extras */
+
+            #topBar {
+                width: 100%;
+                height: 30px;
+                padding: 10px;
+                font-size: smaller;
+                background-color: #13092D;
+            }
+
+
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 1100px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+
+    
